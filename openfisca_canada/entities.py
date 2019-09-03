@@ -70,6 +70,24 @@ Vehicle = build_entity(
 
     For more information, see: https://openfisca.org/doc/coding-the-legislation/50_entities.html
     ''',
+
+    roles = [
+        {
+            'key': 'parent',
+            'plural': 'parents',
+            'label': u'Parents',
+            'max': 2,
+            'subroles': ['first_parent', 'second_parent'],
+            'doc': u'The one or two adults in charge of the household.'
+            },
+        {
+            'key': 'child',
+            'plural': 'children',
+            'label': u'Child',
+            'doc': u'Other individuals living in the household.'
+            }
+        ]
+
     )
 
 entities = [Household, Person, Vehicle]
