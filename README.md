@@ -4,7 +4,7 @@ This repo is an experiment to test Rules as Code using the OpenFisca platform.
 
 We took a small portion of the National Joint Council Travel Directive and attempted to represent it as boolean logic.
 
-This API can be used to calculate whether a persons Car Rental scenario is in sync with the directive.
+This API can be used to calculate whether a persons Car Rental scenario is in line with the directive.  Please note that this is an interpretation of the directive and not an offical tool.
 
 The rulesascode-client repo contains a front end to help visualise how the API works.
 
