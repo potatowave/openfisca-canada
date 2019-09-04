@@ -1,30 +1,12 @@
-# OpenFisca Canada
+# NextGen Travel (Public Services and Procurement Canada)
 
+This repo is an experiment to test Rules as Code using the OpenFisca platform.
 
-The country whose law is modelled here has a very simple tax and benefit system.
+We took a small portion of the National Joint Council Travel Directive and attempted to represent it as boolean logic.
 
-- It has a flat rate tax whose rates increase every year.
-- On the first of December, 2015, it introduced a basic income for all its citizens of age who have no income.
-- On the first of December, 2016, it removed the income condition, providing all its adult citizens with a basic income.
+This API can be used to calculate whether a persons Car Rental scenario is in sync with the directive.
 
-These elements are described in different folders. All the modelling happens within the `openfisca_canada` folder.
-
-- The rates are in the `parameters` folder.
-- The formulas are in the `variables` folder.
-- This country package comes also with *reforms* in the `reforms` folder. This is optional: your country may exist without defining any reform.
-    - In this country, there is [a reform project](./openfisca_canada/reforms/modify_social_security_taxation.py) aiming to modify the social security taxation, deleting the first bracket, raising the intermediary ones and adding a new bracket with a higher tax rate of `40 %` for people earning more than `40000`. This reform project would apply starting from `2017-01-01`.
-
-The files that are outside from the `openfisca_canada` folder are used to set up the development environment.
-
-## Packaging your Country Package for Distribution
-
-Country packages are python distributions. To distribute your package via `pip`, follow the steps given by the [Python Packaging Authority](https://python-packaging-user-guide.readthedocs.io/tutorials/distributing-packages/#packaging-your-project).
-
-## Install Instructions for Users and Contributors
-
-This package requires [Python 3.7](https://www.python.org/downloads/release/python-370/). More recent versions should work, but are not tested.
-
-All platforms that can execute Python are supported, which includes GNU/Linux, macOS and Microsoft Windows (in which case we recommend using [ConEmu](https://conemu.github.io/) instead of the default console).
+The rulesascode-client repo contains a front end to help visualise how the API works.
 
 ### Setting-up a Virtual Environment with Pew
 
