@@ -5,7 +5,6 @@ import os
 from openfisca_core.taxbenefitsystems import TaxBenefitSystem
 
 from openfisca_canada import entities
-from openfisca_canada.situation_examples import couple
 
 
 COUNTRY_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -25,9 +24,3 @@ class CountryTaxBenefitSystem(TaxBenefitSystem):
         param_path = os.path.join(COUNTRY_DIR, 'parameters')
         self.load_parameters(param_path)
 
-        # We define which variable, parameter and simulation example will be used in the OpenAPI specification
-        self.open_api_config = {
-            "variable_example": "vehicle_is_insured",
-            #"parameter_example": "vehicles.procurement_type",
-            "simulation_example": couple,
-            }
