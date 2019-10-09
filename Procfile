@@ -1,0 +1,1 @@
+web: gunicorn openfisca_canada.wsgi --log-file -
